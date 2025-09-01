@@ -1,0 +1,620 @@
+!DOCTYPE html> 
+<html lang="en"> 
+ 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Portifolio</title> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/6.4.2/css/all.min.css" 
+        integrity="sha512z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+ 
+    <style> 
+        * { 
+            padding: 0; 
+            margin: 0; 
+        } 
+        html{ 
+             scroll-behavior: smooth;  
+        } 
+ 
+        body { 
+            background-color: rgb(0, 0, 0); 
+            background-image: url("ttps://www.mooc.org/hubfs/cybersecuritycomputer-science.jpg"); 
+            background-size: cover; 
+ 
+        } 
+ 
+        .navbar { 
+            padding: 30px; 
+            margin: 1px; 
+            display: flex; 
+            padding-bottom: 0px; 
+            padding-top: 0px; 
+            border-style: hidden; 
+        } 
+ 
+        .header { 
+            color: #ff004f; 
+            font-size: 25px; 
+            border: px solid #ff004f; 
+            max-width: fit-content; 
+            border-radius: 15px; 
+            padding: 20px; 
+            padding-top: 50px; 
+            margin-right: 90px; 
+            margin-top: 50px; 
+            margin: 20px; 
+            justify-content: center; 
+            align-items: center; 
+            font-weight: bold; 
+        } 
+ 
+        .links { 
+            color: white; 
+            display: flex; 
+            max-width: fit-content; 
+            font-size: 25px; 
+            margin-left: 100px; 
+            justify-content: center; 
+            align-items: center; 
+            margin-left: 340px; 
+ 
+        } 
+ 
+        .link { 
+            border: px solid rgb(215, 215, 215); 
+            border-radius: 15px; 
+            padding: 5px; 
+            margin: 20px; 
+            color: rgb(131, 255, 214); 
+ 
+        } 
+ 
+        .fa-user { 
+            color: #ff3c78; 
+            font-size: 25px; 
+            padding-right: 15px; 
+        } 
+ 
+        .link a { 
+            color: white; 
+            text-decoration: none; 
+            padding-left: 7px; 
+ 
+        } 
+ 
+        .link a { 
+            position: relative; 
+            text-decoration: none; 
+            font-family: 'poppins', sans-serif; 
+            color: #a0a0a0; 
+            font-size: 18px; 
+            letter-spacing: 0.5px; 
+            padding: 0 10px; 
+        } 
+ 
+        .link a:after { 
+            content: ""; 
+            position: absolute; 
+            background-color: #ff3c78; 
+            height: 3px; 
+            width: 0%; 
+            left: 0; 
+            bottom: -10px; 
+            transition: 0.3s; 
+        } 
+ 
+        .link a:hover { 
+            color: #ffffff; 
+ 
+        } 
+ 
+        .link a:hover:after { 
+            width: 100%; 
+        } 
+ 
+        .frontpage1 { 
+            margin-top: 260px; 
+            font-size: 30px; 
+            margin-left: 60px; 
+        } 
+ 
+        .frontpage1 p { 
+            color: aliceblue; 
+            font-size: 40px; 
+        } 
+ 
+        .frontpage1 h1 { 
+            font-size: 60px; 
+            margin-top: 20px; 
+            color: rgb(165, 165, 165); 
+        } 
+ 
+        .frontpage1 h1 span { 
+            color: #ff004f; 
+        } 
+ 
+        #about .container { 
+            padding: 20px; 
+            font-size: 25px; 
+            border: 2px solid white; 
+            max-width: fit-content; 
+            margin-left: 50px; 
+            border-radius: 25px; 
+            margin-top: 130px; 
+            background-color: black; 
+            margin-right: 50px; 
+            border-style: none; 
+ 
+        } 
+ 
+        .container{ 
+            max-width: fit-content; 
+            color: #fff; 
+        } 
+         
+ 
+        .row { 
+            display: flex; 
+            justify-content: space-between; 
+            flex-wrap: wrap; 
+ 
+        } 
+ 
+        .about-col-1 img { 
+            width: 100%; 
+            border-radius: 30px; 
+        } 
+ 
+        .about-col-1 { 
+            flex-basis: 30%; 
+        } 
+ 
+        .about-col-2 { 
+            flex-basis: 60%; 
+        } 
+ 
+        .sub-title { 
+            font-size: 50px; 
+            font-weight: 600; 
+            color: white; 
+        } 
+ 
+        .tab-titles { 
+            display: flex; 
+            margin: 20px 0 40px; 
+ 
+        } 
+ 
+        .tab-links { 
+            margin-right: 50px; 
+            font-size: 18px; 
+            font-weight: 500; 
+            cursor: pointer; 
+            position: relative; 
+            text-decoration: none; 
+            font-family: 'poppins', sans-serif; 
+            color: #a0a0a0; 
+            letter-spacing: 0.5px; 
+            padding: 0 10px; 
+        } 
+ 
+        .tab-links:after { 
+            content: ""; 
+            position: absolute; 
+            background-color: #ff3c78; 
+            height: 3px; 
+            width: 0%; 
+            left: 0; 
+            bottom: -10px; 
+            transition: 0.3s; 
+        } 
+ 
+        .tab-links:hover { 
+            color: #ffffff; 
+        } 
+ 
+        .tab-links:hover::after { 
+            width: 100%; 
+ 
+        } 
+ 
+        .active-link::after { 
+            width: 50% 
+        } 
+ 
+        .tab-contents ul li { 
+            list-style: none; 
+            margin: 10px 0; 
+        } 
+ 
+        .tab-contents ul li span { 
+            color: #b54769; 
+            font-size: 20px; 
+        } 
+ 
+        .tab-contents { 
+            display: none; 
+        } 
+ 
+        .active-tab { 
+            display: block; 
+        } 
+ 
+        #projects { 
+            padding: 30px 0; 
+        } 
+ 
+        .projects-list { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            grid-gap: 40px; 
+            margin-top: 50px; 
+        } 
+        .container{ 
+            margin: 0 60px 0 60px; 
+        } 
+        .projects-list div{ 
+            background: #262626; 
+            padding: 40px; 
+            font-size: 13px; 
+            font-weight: 500; 
+            border-radius: 10px; 
+            transition: background 0.5s , transform 0.5s; 
+        } 
+        .projects-list div p{ 
+            margin-bottom: 20px; 
+        } 
+        .projects-list div i{ 
+            font-size: 40px; 
+            margin-bottom: 30px; 
+        } 
+        .projects-list div a{ 
+            text-decoration: none; 
+            color: #fff; 
+            font-size: 12px; 
+            margin-top: 20px; 
+            display: inline-block; 
+        } 
+         
+        .projects-list div h2{ 
+            font-size: 30px; 
+            font-weight: 550; 
+            margin-bottom: 15px; 
+ 
+        } 
+        .projects-list div:hover{ 
+             background: #b54769; 
+             transform: translateY(-10px); 
+        } 
+        #portifolio{ 
+            padding: 50px 0; 
+        } 
+        .work-list{ 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            grid-gap: 40px; 
+            margin-top: 50px; 
+        } 
+        .work{ 
+            border-radius: 10px; 
+            position: relative; 
+            overflow: hidden; 
+        } 
+        .work img{ 
+            width: 100%; 
+            border-radius: 10px; 
+            display: block; 
+            transition: transform 0.5s; 
+        } 
+        .layer{ 
+            height: 0; 
+            background: linear-gradient(rgba(0,0,0,0.6),#ff004f); 
+            border-radius: 10px; 
+            position: absolute; 
+            left: 0; 
+            bottom: 0; 
+            overflow: hidden; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            flex-direction: column; 
+            padding: 0 40px; 
+            text-align: center; 
+            font-size: 14px; 
+            transition: height 0.5s; 
+        } 
+        .layer h3{ 
+            font-size: 500; 
+            margin-bottom: 20px; 
+        } 
+        .layer a{ 
+            margin-top: 20px; 
+            color: #ff004f; 
+            text-decoration: none; 
+            font-size: 18px; 
+            line-height: 60px; 
+            background: #fff; 
+            width: 60px; 
+            border-radius: 50%; 
+            text-align: center; 
+ 
+         } 
+         .work:hover img{ 
+            transform: scale(1.1); 
+         } 
+         .work:hover .layer{ 
+            height: 100%; 
+         } 
+         .btn{ 
+            display: block; 
+            margin: 50px auto; 
+            width: fit-content; 
+            border: 1px solid #ff004f; 
+            padding: 14px 50px; 
+            border-radius: 6px; 
+            text-decoration: none; 
+            color: #fff; 
+            transition: background 0.5s ; 
+         } 
+         .btn:hover{ 
+            background: #ff004f; 
+         } 
+         #contact .container{ 
+            max-width: fit-content; 
+         } 
+         .contact-left{ 
+            margin-top: 70px; 
+            flex-basis: 30%; 
+         } 
+         .contact-right{ 
+            flex-basis: 60%; 
+         }  
+         .contact-left p{ 
+            margin-top: 30px; 
+         } 
+        .contact-left p i{ 
+            color: #ff004f; 
+            margin-right: 15px; 
+            font-size: 25px; 
+        } 
+        .social-icons{ 
+            margin-top: 30px; 
+        } 
+        .social-icons a{ 
+            text-decoration: none; 
+            font-size: 30px; 
+            margin-right: 15px; 
+            color: #ababab; 
+            display: inline-block; 
+            transition: transform 0.5s; 
+        } 
+        .social-icons a:hover{ 
+            color: #ff004f; 
+            transform: translateY(-5px); 
+        } 
+        .btn.btn2{ 
+            display: block; 
+            background: #ff004f; 
+        } 
+        .contact-right{ 
+            width: 100%; 
+            text-align: right 
+ 
+        } 
+        form input,form textarea{ 
+            width: 100% ; 
+            height: 100%; 
+            border: 0; 
+            outline: none; 
+            background: #262626; 
+            padding: 15px; 
+            margin: 25px 0; 
+            color: #fff; 
+            font-size: 18px; 
+            border-radius: 6px; 
+        } 
+        form .btn2{ 
+            padding: 14px 60px; 
+            font-size: 18px; 
+            margin-top: 20px; 
+            cursor: pointer; 
+ 
+        }  
+             
+         
+        .copyright{ 
+            width: 100%; 
+            text-align: center; 
+            padding: 25px 0; 
+            background: #262626; 
+            font-weight: 300; 
+            margin-top: 20px; 
+            color: #fff; 
+ 
+        } 
+        .copyright i{ 
+           color: #ff004f;  
+        } 
+         
+ 
+    </style> 
+ 
+</head> 
+ 
+<body> 
+    <div class="frontpage"> 
+        <div class="navbar">
+            <div class="header" title="about me"><i class="fa-solid fa-user "></i>My Portifolio.</div>
+            <div class="links">
+                <div class="link" id="home" title="home"><i class="fas fahome"></i><a href="#home">Home</a></div>
+                <div class="link" id="about" title="about"><i class="fa-sharp fa-solid fa-bars-progress"></i><a>
+                        href="#about">About</a>
+                </div>
+                <div class="link" id="service" title="Services"><i class="fabrands fa-usps"></i><a>
+                        href="#projects">Projects</a>
+                </div>
+                <div class="link" id="portifolio" title="Portifolio"><i class="fa-solid fa-tarp"></i><a>
+                        href="#portifilio">Portifolio</a></div>
+                <div class="link" id="contact" title="Contact"><i class="fasolid fa-address-card"></i><a>
+                        href="#contact">Contect</a></div>
+            </div>
+        </div>
+        <div class="frontpage1">
+            <p>Web Devloper</p>
+            <h1>Hi_i'm <span>Shanyu</span><br>From Andhra Pradhesh</h1>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="WhatsApp Image 2023-11-16 at 19.29.06_d89689a1.jpg" alt="this is my image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, unde id eligendi, voluptas
+                        numquam alias culpa distinctio maxime facere sapiente explicabo omnis obcaecati similique
+                        inventore dolore provident cum! Suscipit, tempore. Lorem, ipsum dolor sit amet consectetur
+                        adipisicing elit. Repudiandae quia sit modi deserunt dicta temporibus sed, quisquam non magnam
+                        vero nam, autem provident quidem vel sint deleniti perspiciatis animi. Exercitationem.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>C,C++</span><br>Solving Problems</li>
+                            <li><span>Web Develpment</span><br>Web App Devlopment</li>
+                            <li><span>App Develpment</span><br>Still I'm Learning</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li><span>No Experience Till Now</span><br>I'm Searching For Good Opportunity.<br> This
+                                Portifolio Is My Frist Project</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>2022-2026</span><br>Currently I'm studying B.Tech in National Institute Of Technology
+                                Meghalaya </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="projects-list">
+                <div><i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, reiciendis minus modi officia
+                        perspiciatis similique exercitationem laudantium autem soluta omnis totam nostrum sunt dolorum
+                        perferendis. Nemo ratione molestiae eum pariatur.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div><i class="fa-solid fa-code"></i>
+                    <h2>C,C++</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, reiciendis minus modi officia
+                        perspiciatis
+                        similique exercitationem laudantium autem soluta omnis totam nostrum sunt dolorum perferendis.
+                        Nemo ratione
+                        molestiae eum pariatur.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div><i class="fa-brands fa-app-store"></i>
+                    <h2>App Devlpment</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, reiciendis minus modi officia
+                        perspiciatis
+                        similique exercitationem laudantium autem soluta omnis totam nostrum sunt dolorum perferendis.
+                        Nemo ratione
+                        molestiae eum pariatur.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="portifolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+            <div class="work">
+                <img src="https://www.theladders.com/wpcontent/uploads/programmer-191101.jpg" alt="">
+                <div class="layer">
+                    <h3>Social Media App</h3>
+                    <p>The app connects you  yo the talented people around the world Download it store.</p>
+                    <a href=""><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="https://wallpaperaccess.com/full/3632449.jpg" alt="">
+                <div class="layer">
+                    <h3>Music App</h3>
+                    <p>The app connects you yo the talented people around the world Download it store.</p>
+                    <a href=""><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="https://tse3.mm.bing.net/th?id=OIP.PmxAE_6JmIj5BakQyG4IAHaEK&pid=Api&P=0&h=180" alt="">
+                <div class="layer">
+                    <h3>Online Shopping App</h3>
+                    <p>The app connects you yo the talented people around the world Download it store.</p>
+                    <a href=""><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1>Contact Me</h1>
+                    <p><i class="fa-solid fa-paperplane"></i>contact@example.com</p>
+                    <p><i class="fa-solid fa-phone"></i>9583261554</p>
+                    <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href=""  download class="btn btn2">Download CV</a>
+            </div>
+                <div class="contact-right">
+                <form action="">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <textarea name="Message" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button> 
+                </form>
+            </div>
+        </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright .Made with <i class="fa-solid fa-heart"></i>my self</p>
+        </div>
+    </div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+    </script>
+</body>
+
+</html>
